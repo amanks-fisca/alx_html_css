@@ -1,34 +1,71 @@
-<!-- 0-index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Headphones</title>
+  <title>Headphones Landing Page</title>
   <link rel="stylesheet" href="1-styles.css" />
+  <link rel="stylesheet" href="images/Fonts/style.css" />
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
+
+  <!-- Hero Section -->
+  <header class="hero">
     <div class="container">
-      <img src="images/logo_headphones.png" alt="Headphones Logo" class="logo">
-      <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Contact</a>
-      </nav>
+      <div class="nav">
+        <img src="images/logo_headphones.png" alt="Headphones logo" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="#">What we do</a></li>
+            <li><a href="#">Our results</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero-content">
+        <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+        <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+        <a href="#" class="btn">CALL TO ACTION</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-text">
-        <h1>Get the Best Audio Experience</h1>
-        <p>High quality headphones for your music and calls.</p>
-        <button class="btn">Buy Now</button>
+  <!-- What We Do Section -->
+  <main>
+    <section class="services">
+      <div class="container">
+        <h2 class="section-title">What we do…</h2>
+        <p class="section-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut
+          placerat orci. Nulla facilisi.
+        </p>
+
+        <div class="service-grid">
+          <div class="service">
+            <i class="icon hearing" aria-hidden="true"></i>
+            <h3>Hearing Technology</h3>
+            <p>Assistive tech for immersive sound experiences.</p>
+          </div>
+          <div class="service">
+            <i class="icon music" aria-hidden="true"></i>
+            <h3>Music Production</h3>
+            <p>Compose, edit and refine professional-quality audio.</p>
+          </div>
+          <div class="service">
+            <i class="icon sound-frequency" aria-hidden="true"></i>
+            <h3>Sound Design</h3>
+            <p>Shape moods and emotion with expert sound effects.</p>
+          </div>
+          <div class="service">
+            <i class="icon video" aria-hidden="true"></i>
+            <h3>Video Editing</h3>
+            <p>Cut, sync and polish stunning multimedia stories.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
+
 </body>
 </html>

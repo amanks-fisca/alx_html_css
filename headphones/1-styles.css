@@ -1,58 +1,45 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* ===== VARIABLES ===== */
 :root {
   --primary-color: #ff6565;
-  --text-color: white;
   --bg-dark: #1d1d1d;
-  --btn-radius: 30px;
+  --text-light: #ffffff;
+  --text-dark: #333333;
   --font-main: Arial, sans-serif;
+  --max-width: 1100px;
 }
 
-/* BASE STYLES */
+/* ===== GLOBAL STYLES ===== */
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-color);
+  color: var(--text-dark);
+  background-color: white;
   line-height: 1.6;
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  display: block;
 }
 
-/* HERO SECTION */
-.hero {
-  background-image: url("images/headphones_hero_1.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: auto;
 }
 
-/* NAVIGATION */
+/* ===== NAVIGATION ===== */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -62,34 +49,42 @@ img {
 
 .nav ul {
   display: flex;
-  gap: 20px;
-  font-weight: bold;
+  gap: 30px;
+  list-style: none;
 }
 
-/* HERO CONTENT */
-.hero-content {
+.nav a {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background-color: #f4f4f4;
+  padding: 60px 0 30px;
   text-align: center;
-  margin-top: 80px;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 500px;
-  margin-inline: auto;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--text-dark);
 }
 
 .btn {
+  display: inline-block;
+  padding: 12px 30px;
   background-color: var(--primary-color);
-  color: white;
-  padding: 15px 30px;
-  border-radius: var(--btn-radius);
+  color: var(--text-light);
+  border-radius: 30px;
   font-weight: bold;
+  text-transform: uppercase;
   transition: background 0.3s ease;
 }
 
@@ -97,24 +92,32 @@ img {
   background-color: #e04e4e;
 }
 
-/* WHAT WE DO SECTION */
+/* Intro paragraph after hero */
+.intro-paragraph {
+  margin: 40px auto;
+  max-width: 700px;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* ===== WHAT WE DO SECTION ===== */
 .services {
-  background-color: white;
-  color: black;
   padding: 60px 20px;
+  background-color: white;
   text-align: center;
 }
 
-.services .section-title {
-  font-size: 2rem;
+.section-title {
+  font-size: 1.8rem;
   margin-bottom: 10px;
+  color: var(--text-dark);
 }
 
-.services .section-desc {
+.section-desc {
+  max-width: 700px;
+  margin: 0 auto 40px;
   font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  color: #555;
+  color: #555555;
 }
 
 .service-grid {
@@ -123,37 +126,38 @@ img {
   grid-template-columns: 1fr;
 }
 
+/* Individual service box */
 .service {
   padding: 20px;
-  border-radius: 8px;
 }
 
 .service h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
 }
 
 .service p {
   font-size: 0.95rem;
-  color: #444;
+  color: #444444;
 }
 
-/* ICON FONT */
+/* ===== ICONS ===== */
 .icon {
   font-size: 4rem;
   color: var(--primary-color);
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-/* RESPONSIVE DESIGN */
+/* ===== RESPONSIVE STYLES ===== */
 @media (min-width: 768px) {
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-content p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .service-grid {

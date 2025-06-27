@@ -138,8 +138,8 @@ img {
   color: #444;
 }
 
-/* ICON FONT STYLE */
-.holberton_school-icon {
+/* ICON FONT */
+.icon {
   font-size: 4rem;
   color: var(--primary-color);
   display: inline-block;
@@ -157,6 +157,6 @@ img {
   }
 
   .service-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -1,0 +1,29 @@
+/* Base styles reused from 3-styles.css assumed */
+
+/* Footer styles */
+.footer {
+  background-color: #090b0d;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer .footer-logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive Footer */
+@media (max-width: 600px) {
+  .footer .footer-logo img {
+    max-width: 120px;
+  }
+  .footer p {
+    font-size: 12px;
+  }
+}

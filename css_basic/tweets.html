@@ -1,38 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Tweets</title>
-  <link href="base.css" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tweets.html">Tweets</a></li>
-    </ul>
-  </header>
+/* FLEXBOX LAYOUT RULES */
 
-  <main>
-    <article>
-      <h1>Tweet Highlight</h1>
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">Vision board for my front-end journey. 
-        <a href="https://t.co/3xFEUfAemv">pic.twitter.com/3xFEUfAemv</a></p>
-        &mdash; Francisca Amankrah (@fiscaamankrah) 
-        <a href="https://twitter.com/fiscaamankrah/status/1920243268350038448?ref_src=twsrc%5Etfw">May 7, 2025</a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </article>
-    <aside>
-      <p>placeholder to add comment thread later</p>
-    </aside>
-  </main>
+/* Make the body a flex container with vertical stacking */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full height of viewport */
+}
 
-  <footer>
-    <p>Made by Francisca Amankrah - <a href="https://github.com/amanks-fisca" target="_blank">here</a>.</p>
-  </footer>
-</body>
-</html>
+/* Make the main area a flex container with horizontal layout */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* take available space */
+}
 
+/* Article takes 2/3 of space */
+article {
+  flex: 2;
+  overflow-y: auto; /* enables scrolling if content is long */
+  padding: 20px;
+}
+
+/* Aside takes 1/3 of space */
+aside {
+  flex: 1;
+  overflow-y: auto; /* enables scrolling if content is long */
+  padding: 20px;
+}
+
+/* Optional: fix header and footer appearance */
+header, footer {
+  padding: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}

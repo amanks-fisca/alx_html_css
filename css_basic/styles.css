@@ -1,5 +1,3 @@
-/* === Flexbox layout === */
-
 /* Step 1: Make body a vertical flex container */
 body {
   display: flex;

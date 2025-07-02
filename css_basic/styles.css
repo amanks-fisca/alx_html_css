@@ -1,1 +1,32 @@
+/* === Flexbox layout === */
+
+/* Step 1: Make body a vertical flex container */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height to allow scrolling inside children */
+}
+
+/* Step 2: Make main a horizontal flex container */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* Allows <main> to grow and fill remaining space */
+}
+
+/* Step 3: Set the article and aside proportions */
+article {
+  flex: 2; /* Takes 2 parts of the space */
+  overflow-y: auto; /* Enables vertical scroll */
+}
+
+aside {
+  flex: 1; /* Takes 1 part of the space */
+  overflow-y: auto; /* Enables vertical scroll */
+}
+
+/* Optional: make sure header and footer don't grow or shrink */
+header, footer {
+  flex-shrink: 0; /* Prevent them from shrinking */
+}
 

@@ -56,6 +56,14 @@ To view the project locally:
 
 3. Open index.html in your browser
 
+## 📸 Screenshots
+
+### 🖥️ Desktop View
+![Desktop View](./screenshots/desktop.png)
+
+### 📱 Mobile View
+![Mobile View](./screenshots/mobile.png)
+
 
 ## 📝 Author
 

@@ -69,4 +69,4 @@ To view the project locally:
 
 **Francisca Amankrah**  
 ALX SE Student  
-GitHub: [@amamks-fisca](https://github.com/amanks-fisca))
+GitHub: [@amanks-fisca](https://github.com/amanks-fisca))

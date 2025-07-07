@@ -422,30 +422,35 @@ nav ul li a {
   line-height: 1.6;
 }
 
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-content {
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.footer-content img {
+.footer-logo {
   width: 100px;
-  margin-bottom: 10px;
 }
 
-.footer-content div i {
-  margin: 0 10px;
-  font-size: 20px;
-  cursor: pointer;
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.6;
 }
 
 /* Responsive Fixes */

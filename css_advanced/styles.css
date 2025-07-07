@@ -197,16 +197,20 @@ nav ul li a {
   font-style: italic;
   line-height: 1.5;
   margin-bottom: 20px;
+  text-align: center; 
 }
 
 .testimonials figcaption h3 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
+  color: white; 
 }
 
 .testimonials figcaption p {
   font-size: 14px;
+  font-style: italic; 
+  color: white;      
   opacity: 0.8;
 }
 

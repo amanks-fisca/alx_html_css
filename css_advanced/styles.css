@@ -1,3 +1,398 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #f0f0f0;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: transparent;
+  padding: 20px 80px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  height: 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Hero Section */
+.hero {
+  background: url('object.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  font-size: clamp(12px, 2vw, 18px);
+  font-weight: 700;
+  margin: 0 15px;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #a050e0;
+}
+
+/* Mentors Section */
+.mentors {
+  background-color: #fff;
+  color: #000;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.mentors h2 {
+  color: #C271FF;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.mentor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.mentor {
+  max-width: 160px;
+}
+
+.mentor img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.mentor h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+/* Shared / Centralized Utility Classes */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+}
+
+
+.mentor p {
+  font-size: 12px;
+  font-style: italic;
+  color: #C271FF;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #C271FF;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials figure {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonials img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials blockquote {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+.testimonials figcaption h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white; 
+}
+
+.testimonials figcaption p {
+  font-size: 14px;
+  font-style: italic; 
+  color: white;        
+  opacity: 0.8;
+}
+
+
+
+/* Tutorials Section */
+.tutorials {
+  padding: 80px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.tutorials h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.tutorial {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tutorial img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tutorial h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.tutorial p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.tutorial .stars {
+  color: #C271FF;
+  margin: 10px 0;
+}
+
+/* Membership Section */
+.membership {
+  background-color: #f8f8f8;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.membership h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.membership article {
+  max-width: 200px;
+}
+
+.membership img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.membership h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.membership p {
+  font-size: 14px;
+  color: #555;
+}
+
+.membership button {
+  padding: 12px 24px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.membership button:hover {
+  background-color: #a050e0;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #fff;
+  padding: 80px 40px;
+}
+
+.faq h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.faq article {
+  max-width: 500px;
+}
+
+.faq h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-content div i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .mentor-cards,
+  .membership-cards,
+  .faq-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutorial-cards {
+    grid-template-columns: 1fr;
+  }
 }

@@ -320,10 +320,13 @@ nav ul li a {
 }
 
 .membership h2 {
-  color: #000;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 40px;
+}
+
+.purple {
+  color: #C271FF;
 }
 
 .membership-cards {
@@ -331,16 +334,20 @@ nav ul li a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .membership article {
   max-width: 200px;
+  text-align: center;
 }
 
 .membership img {
   width: 80px;
   margin-bottom: 15px;
+  /* Optional: force icon to purple using CSS filter if SVG isn't purple */
+  filter: hue-rotate(270deg);
 }
 
 .membership h3 {
@@ -355,6 +362,7 @@ nav ul li a {
 }
 
 .membership button {
+  margin-top: 30px;
   padding: 12px 24px;
   background-color: #C271FF;
   color: white;

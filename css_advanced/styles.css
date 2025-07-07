@@ -8,7 +8,8 @@
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   background-color: #fff;
-  color: #fff;
+  color: #000;
+  line-height: 1.5;
 }
 
 /* Header */
@@ -46,7 +47,7 @@ nav ul li a {
 }
 
 /* Hero Section */
-main > section:first-of-type {
+.hero {
   background: url('object.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
@@ -56,33 +57,35 @@ main > section:first-of-type {
   text-align: center;
   padding-top: 100px;
   position: relative;
+  color: #fff;
 }
 
-main > section:first-of-type::before {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
-main > section:first-of-type > div {
+.hero > div {
   position: relative;
   z-index: 1;
 }
 
-main h1 {
+.hero h1 {
   font-size: clamp(40px, 8vw, 100px);
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-main span {
+.hero span {
   font-size: clamp(12px, 2vw, 18px);
   font-weight: 700;
   margin: 0 15px;
 }
 
-button {
+.hero button {
   margin-top: 30px;
   padding: 12px 24px;
   background-color: #C271FF;
@@ -95,13 +98,11 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.hero button:hover {
   background-color: #a050e0;
 }
 
-/* ===============================
-   LEARN FROM THE PROS SECTION
-================================== */
+/* Mentors Section */
 .mentors {
   background-color: #fff;
   color: #000;
@@ -120,7 +121,7 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 60px;
-  flex-wrap: wrap; /* Responsive for mobile */
+  flex-wrap: wrap;
 }
 
 .mentor {
@@ -140,30 +141,219 @@ button:hover {
   font-weight: 700;
   margin-bottom: 5px;
 }
+
 .mentor p {
   font-size: 12px;
   font-style: italic;
   color: #C271FF;
 }
 
-/* ================
-   Responsive Fixes
-==================== */
+/* Testimonials Section */
+.testimonials {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials figure {
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonials blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.testimonials figcaption h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.testimonials figcaption p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Tutorials Section */
+.tutorials {
+  padding: 80px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.tutorials h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.tutorial {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tutorial img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tutorial h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.tutorial p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.tutorial .stars {
+  color: #C271FF;
+  margin: 10px 0;
+}
+
+/* Membership Section */
+.membership {
+  background-color: #f8f8f8;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.membership h2 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.membership article {
+  max-width: 200px;
+}
+
+.membership img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.membership h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.membership p {
+  font-size: 14px;
+  color: #555;
+}
+
+.membership button {
+  padding: 12px 24px;
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.membership button:hover {
+  background-color: #a050e0;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #fff;
+  padding: 80px 40px;
+}
+
+.faq h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.faq article {
+  max-width: 500px;
+}
+
+.faq h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-content div i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive Fixes */
 @media (max-width: 768px) {
-  .mentor-cards {
-    gap: 30px;
-  }
-
-  .mentor {
-    max-width: 100%;
-  }
-
-  .mentors {
-    padding: 40px 20px;
-  }
-
   header {
     padding: 20px 30px;
   }
-}
 
+  .mentor-cards,
+  .membership-cards,
+  .faq-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutorial-cards {
+    grid-template-columns: 1fr;
+  }
+}

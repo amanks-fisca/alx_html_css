@@ -141,6 +141,24 @@ nav ul li a {
   font-weight: 700;
   margin-bottom: 5px;
 }
+/* Shared / Centralized Utility Classes */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+}
+
 
 .mentor p {
   font-size: 12px;
@@ -150,32 +168,48 @@ nav ul li a {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: #f8f8f8;
+  background-color: #C271FF;
+  color: white;
   padding: 60px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonials figure {
-  max-width: 600px;
-  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonials img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonials blockquote {
-  font-size: 18px;
+  font-size: 22px;
   font-style: italic;
-  margin: 20px 0;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .testimonials figcaption h3 {
   font-size: 16px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .testimonials figcaption p {
   font-size: 14px;
-  color: #777;
+  opacity: 0.8;
 }
+
 
 /* Tutorials Section */
 .tutorials {
